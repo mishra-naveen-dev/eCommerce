@@ -1,8 +1,8 @@
-import React from "react";
-import Img1 from "../../../assets/Women.png"
-import Img2 from "../../../assets/women2.jpg"
-import Img3 from "../../../assets/women3.jpg"
-import Img4 from "../../../assets/women4.jpg"
+
+import Img1 from "../../../assets/Women.png";
+import Img2 from "../../../assets/women2.jpg";
+import Img3 from "../../../assets/women3.jpg";
+import Img4 from "../../../assets/women4.jpg";
 import { FaStar } from "react-icons/fa6";
 
 const ProductsData = [
@@ -74,17 +74,17 @@ const Products = () => {
                 data-aos="fade-up"
                 data-aos-delay={data.aosDelay}
                 key={data.id}
-                className="space-y-3"
+                className="space-y-3 text-center w-[200px] cursor-pointer"
               >
                 <img
                   src={data.img}
                   alt=""
-                  className="h-[220px] w-[150px] object-cover rounded-md"
+                  className="h-[220px] w-[200px] object-cover rounded-md mx-auto"
                 />
                 <div>
                   <h3 className="font-semibold">{data.title}</h3>
                   <p className="text-sm text-gray-600">{data.color}</p>
-                  <div className="flex items-center gap-1">
+                  <div className="flex items-center justify-center gap-1">
                     <FaStar className="text-yellow-400" />
                     <span>{data.rating}</span>
                   </div>
@@ -94,8 +94,7 @@ const Products = () => {
           </div>
           {/* view all button */}
           <div className="flex justify-center">
-            <button className="text-center mt-10 cursor-pointer bg-primary text-white py-1 px-5 rounded-md">
-              <a href='TopProduct'></a>
+            <button className="text-center mt-10 cursor-pointer bg-transparent border border-primary text-primary py-2 px-6 rounded-md hover:bg-primary hover:text-white transition">
               View All Button
             </button>
           </div>
